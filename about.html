@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us Design</title>
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+</head>
+    <body>
+        <section class="header">
+            <nav>
+                <a href="about.html"><img src="pics/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick= "hideMenu()"></i>
+                    <ul>
+                        <li><a href="first.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="login.html">LOGIN</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="feedback.html">FEEDBACK</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick= "showMenu()"></i>
+            </nav>
+             <h1>About Us</h1>
+             </section>
+             <section class="about-us">
+                <div class="row">
+                    <div class="about-col">
+                        <h1>ABOUT OUR COLLEGE</h1>
+                        <p><h4>At Aimers collage,we are committed to excellence in education, research, and innovation. With a rich history of academic achievements, we offer diverse programs that prepare students to thrive in a rapidly evolving world. Our campus fosters a vibrant, inclusive community where students are encouraged to explore new ideas, engage in cutting-edge research, and develop critical skills for the future.</h4></p>
+                        <p><h4>We take pride in shaping the leaders of tomorrow through hands-on learning, global partnerships, and a strong emphasis on creativity and technology.At Aimers, we are dedicated to fostering a dynamic and supportive academic environment that nurtures the intellectual and personal growth of our students. Established with a mission to provide world-class education, we offer a diverse range of undergraduate, graduate, and professional programs designed to prepare students for success in their chosen fields. Our institution prides itself on its commitment to research, innovation, and the development of solutions to global challenges. With state-of-the-art facilities and a highly qualified faculty, we empower students to engage in critical thinking, collaborative learning, and hands-on experience that extends beyond the classroom. We believe in the transformative power of education, encouraging students to explore new ideas, embrace cultural diversity, and make meaningful contributions to society. Our vibrant campus community is a melting pot of cultures, ideas, and opportunities, where students can pursue academic excellence, engage in extracurricular activities, and develop leadership skills.</h4></p>
+
+                        <div class="about-col">  
+                            <img src="pics/forabout.webp">  
+                </div>
+                </div>
+                </div>
+        
+
+             </section>
+                
+
+        <section class="Footer">
+            <h4>About Us</h4>
+            <p>"Our College streamlines academic and administrative processes, 
+                providing an efficient, user-friendly platform for managing student records,
+                 faculty data, course registrations, and campus operations, 
+                 ensuring seamless communication and enhanced productivity for all stakeholders."
+             </p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-Linkedin"></i>
+            </div>
+        </section>
+    
+    <script>
+        var navlinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right ="0";
+        }
+        function hideMenu() {
+            navLinks.style.right ="-200px";
+        }
+    </script>
+    </body>
+</html>
