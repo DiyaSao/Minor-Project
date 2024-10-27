@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Feedback Form</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url("pics/loggin.jpg");
+            background-size: fixed; 
+            background-position: fixed; 
+            margin: 0;
+            padding: 0;
+            color: white; /
+        }
+nav img {
+    width: 150px;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    color: #fff;
+    position: relative;
+}
+.nav-links ul li a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #801818;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width:100%;
+}
+.text-box h1 {
+    font-size: 62px;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color:beige;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+nav .fa {
+    display: none;
+
+}
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #cc3737;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+        h1, h2 {
+            text-align: center;
+            color: #fff;
+        }
+        form {
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: auto;
+            border: none; /* Remove border */
+            background: rgba(104, 95, 95, 0.8); 
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: 700;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 98%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #721818;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background: #083508;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: #0c3a0c;
+        }
+        .feedback-section {
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #fff; 
+        }
+        .submit-container {
+            text-align: center; 
+            margin-top: 20px; 
+        }
+    </style>
+    <script type="text/javascript">
+        function validateForm(frm) {
+            if (frm.name.value === "") {
+                alert("Name is required.");
+                frm.name.focus();
+                return false;
+            }
+            if (frm.email.value === "") {
+                alert("Email is required.");
+                frm.email.focus();
+                return false;
+            }
+            if (frm.feedback.value === "") {
+                alert("Feedback is required.");
+                frm.feedback.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <a href="fisrt.html"><img src="pics/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick= "hideMenu()"></i>
+                <ul>
+                    <li><a href="first.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="feedback.html">FEEDBACK</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick= "showMenu()"></i>
+        </nav>
+    </div>
+
+<h1>University Feedback Form</h1>
+
+<form action="//submit.feedback" method="post" onsubmit="return validateForm(this);">
+    <div class="feedback-section">
+        <label for="name">Full Name*:</label>
+        <input type="text" id="name" name="name" maxlength="100" required>
+
+        <label for="email">Email*:</label>
+        <input type="email" id="email" name="email" maxlength="100" required>
+
+    </div>
+
+    <div class="feedback-section">
+        <label for="feedback">Feedback*:</label>
+        <textarea id="feedback" name="feedback" rows="6" maxlength="500" required></textarea>
+
+        <label for="rating">Overall Experience Rating:</label>
+        <select id="rating" name="rating">
+            <option value="">Select Rating</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+    </div>
+
+    <div class="feedback-section">
+        <label for="suggestions">Suggestions for Improvement:</label>
+        <textarea id="suggestions" name="suggestions" rows="4" maxlength="300"></textarea>
+    </div>
+
+    <div class="submit-container">
+        <input type="submit" value="Submit Feedback">
+    </div>
+</form>
+
+<div class="footer">
+    <p>Thank you for your feedback! Your input helps us improve.</p>
+</div>
+
+</body>
+</html>

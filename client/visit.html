@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Us to Know More</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background:url('https://wallpapercave.com/wp/wp9138672.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff; /* Text color to contrast with the background */
+}
+
+/* Navbar styling */
+nav {
+    background: black;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay on the background image */
+}
+
+.text-content {
+    flex: 1 1 60%;
+    padding: 20px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.long-paragraph p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+/* Image on the Right */
+.image-content {
+    flex: 8 8 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image-content img {
+    max-width: 80%;
+    margin-top: 200px;
+    height: 300px;
+    background-position: center;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+
+    .image-content {
+        margin-top: 40px;
+        
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+}
+
+        </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="first.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="#contact us">Contact Us</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section with content on left and image on right with background -->
+    <section class="content">
+        <div class="text-content">
+            <h1>Welcome to Our Institute Management System</h1>
+            <div class="long-paragraph">
+                <p>
+                    Welcome to the Institute Management System. This system is designed to streamline administrative tasks and provide 
+                    students and faculty with easy access to academic information.Our university prides itself on offering cutting-edge 
+                    technological tools to enhance the learning experience.Whether you are looking to enroll in a course,check your grades, 
+                    or manage your research,our system is designed to cater to all your academic needs in an efficient manner.Our Management System covers a wide range of functionalities, from course registration, timetable management,and exam 
+                    scheduling to providing a platform for students to access online resources and faculty to manage their courses. 
+                    The system integrates seamlessly with the university's digital infrastructure,ensuring that all departments are connected.
+                    Through our advanced analytics, students can track their academic progress and stay on top of assignments,exams,and 
+                    other responsibilities. Our faculty members can also benefit from the system's easy-to-use interface to upload course materials, 
+                    track attendance, and communicate directly with students. 
+                    <br><br>
+                    Additionally, the University Management System is accessible across all devices. Whether you're using a desktop, tablet, 
+                    or mobile phone, you can access the system's full functionality anytime and anywhere.
+                </p>
+            </div>
+        </div>
+        <div class="image-content">
+            <img src="https://editor.analyticsvidhya.com/uploads/82860library-management-system.jpg" alt="University Logo">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 University Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

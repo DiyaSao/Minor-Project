@@ -1,0 +1,11 @@
+# Ignore editor config files
+.vscode/
+
+# Ignore image files
+*.jpg
+*.png
+*.webp
+
+# Ignore other specific files you don't want
+node_modules/
+.DS_Store
