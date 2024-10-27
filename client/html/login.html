@@ -1,60 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login Page</title>
-        <link rel="stylesheet" href="login.css">
-    </head>
-    <body> 
-        <section class="header">
-            <h2 class="logo">AIMERS</h2>
-            <nav class="navigation">
-                <a href="first.html">HOME</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="login.html">LOGIN</a>
-                <a href="contact.html">CONTACT US</a>
-                <a href="feedback.html">FEEDBACK</a>
-            </nav>
-        </section>
-        <div class="wrapper">
-            <div class="form-box login">
-                <h2>LOGIN</h2>
-                <form action="#">
-                <div class="select-container">
-                    <select class="select-box">
-                        <option value="User">USER TYPE</option>
-                        <option value="Admin">ADMIN</option>
-                        <option value="student">STUDENT</option>
-                        <option value="Teacher">TEACHER</option>
-                    </select>
-                </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="person"></ion-icon>
-                        </span>
-                        <input type="text" required>
-                        <label>USERNAME</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="lock"></ion-icon>
-                        </span>
-                        <input type="password" required>
-                        <label>PASSWORD</label>
-                    </div>
-                    <div class="remember-forgot">
-                        <label><input type="checkbox">Remember me?</label>
-                    </div>
-                    <button type="submit" class="btn">LOGIN</button>
-                    <div class="login-register">
-                        <p>Forgot Password? <a href="#" class="login-link">Change Password</a></p>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <script src="script.js"></script>
-        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <section class="header">
+      <h2 class="logo">AIMERS</h2>
+      <nav class="navigation">
+        <a href="first.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="login.html">LOGIN</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="feedback.html">FEEDBACK</a>
+      </nav>
+    </section>
+    <div class="wrapper">
+      <div class="form-box login">
+        <h2>LOGIN</h2>
+        <form id="loginForm">
+          <div class="select-container">
+            <select class="select-box" id="userType">
+              <option value="User">USER TYPE</option>
+              <option value="Admin">ADMIN</option>
+              <option value="Student">STUDENT</option>
+              <option value="Teacher">TEACHER</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="person"></ion-icon>
+            </span>
+            <input type="text" id="username" required />
+            <label>USERNAME</label>
+          </div>
+          <div class="input-box">
+            <span class="icon">
+              <ion-icon name="lock"></ion-icon>
+            </span>
+            <input type="password" id="password" required />
+            <label>PASSWORD</label>
+          </div>
+          <div class="remember-forgot">
+            <label><input type="checkbox" />Remember me?</label>
+          </div>
+          <button type="submit" class="btn">LOGIN</button>
+          <div class="login-register">
+            <p>
+              Forgot Password?
+              <a href="#" class="login-link">Change Password</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../js/script.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+      const hardcodedUsername = "admin";
+      const hardcodedPassword = "admin123";
+
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); 
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          if (
+            username === hardcodedUsername &&
+            password === hardcodedPassword
+          ) {
+            window.location.href = "admin.html";
+          } else {
+            alert("Invalid username or password!");
+          }
+        });
+    </script>
+  </body>
 </html>

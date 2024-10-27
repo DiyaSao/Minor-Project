@@ -9,7 +9,7 @@ body {
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("pics/loggin.jpg");
+        background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../pics/loggin.jpg");
         background-position: center;
     }
 .header {

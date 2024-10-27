@@ -33,7 +33,7 @@ body {
 }
 
 .dashboard {
-        background-image: url("pics/portal.jpg");
+        background-image: url("../pics/portal.jpg");
         background-size: cover;
         background-position: center;
         width: 100%;
